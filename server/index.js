@@ -2,6 +2,7 @@ import Express from 'express';
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from 'cors';
+import 'dotenv/config'
 // import dotenv from 'dotenv';
 const app = Express();
 app.use(cors());
