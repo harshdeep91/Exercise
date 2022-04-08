@@ -1,5 +1,5 @@
 import router from 'express';
-import Exercise from '../models/exercise.model';
+import Exercise from '../models/exercise.model.js';
 const Router = router.Router();
 Router.route('/').get((req, res) => {
     Exercise.find()

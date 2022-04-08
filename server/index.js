@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from 'cors';
 import 'dotenv/config'
+import exerciseRouter from './routes/exercise.js';
+import userRouter from './routes/user.js';
 // import dotenv from 'dotenv';
 const app = Express();
 app.use(cors());
@@ -17,8 +19,6 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
-const exerciseRouter = require('./routes/exercise');
-const userRouter = require('./routes/user');
 app.use('/exercise', exerciseRouter);
 app.use('/user', userRouter);
 app.listen(PORT, () => {
